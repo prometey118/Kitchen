@@ -24,5 +24,8 @@ public class Size {
     public func screenHeight() -> CGFloat {
         return UIScreen.main.bounds.height
     }
-    
+    public func scaleToLeftCorner() -> CGFloat {
+        let x = -UIScreen.main.bounds.width/3.8
+        return x
+    }
 }

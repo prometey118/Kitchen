@@ -28,7 +28,6 @@ struct TextOnImage: View {
     var url: String
     var body: some View {
         ZStack {
-//            Color.red.ignoresSafeArea()
             AsyncImage(url: URL(string: url),
                                    content: { image in
                                            image.resizable()
@@ -39,10 +38,11 @@ struct TextOnImage: View {
             }).frame(width: size.scaleWidth(434), height: size.scaleHeight(148))
             Text(text)
                 .font(.system(size: 20, weight: .medium))
-                .frame(width: size.scaleWidth(130), height: size.scaleHeight(100))
+                .frame(width: size.scaleWidth(154), height: size.scaleHeight(100), alignment: .topLeading)
                 .border(Color(.red))
-                .offset(x: -100, y: -40)
-            
+                .offset(x: size.scaleToLeftCorner(), y: -25)
+                .padding(.top)
+                .padding(.leading)
         }
     }
     
