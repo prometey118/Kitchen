@@ -28,7 +28,7 @@ struct CategoriesView: View {
                     Button("Все меню", action: pr)
                         .buttonStyle(.borderedProminent)
                 }
-                .padding(20)
+                .padding(5)
             }
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(data, id: \.self) { item in
@@ -44,10 +44,7 @@ struct CategoriesView: View {
                                     .offset(x: 4,y:9)
                                     .aspectRatio(contentMode: .fill)
     //                                .resizable()
-                                                        .scaledToFit()
-    //                                .background(Color(red: 0.97, green: 0.97, blue: 0.96))
-                                                               
-                                                               .cornerRadius(20)
+                                                        .scaledToFit()                                                     
                                                        },
                                                        placeholder: {
                                                            ProgressView()
