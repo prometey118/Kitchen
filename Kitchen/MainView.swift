@@ -9,11 +9,18 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            TextOnImage(text: "Пекарни и кондитерские", url: url)
-            TextOnImage(text: "Фастфуд", url: url2)
-            TextOnImage(text: "Азиатская кухня", url: url3)
-            TextOnImage(text: "Супы", url: url4)
+        NavigationView {
+            VStack(spacing: 20) {
+                NavigationLink {
+                    CategoriesView()
+                } label: {
+                    TextOnImage(text: "Пекарни и кондитерские", url: url)
+                }
+                
+                TextOnImage(text: "Фастфуд", url: url2)
+                TextOnImage(text: "Азиатская кухня", url: url3)
+                TextOnImage(text: "Супы", url: url4)
+            }
         }
     }
     
