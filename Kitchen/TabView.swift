@@ -14,7 +14,7 @@ struct TabVew: View {
                 .tabItem {
                     Label("Order", systemImage: "list.dash")
                 }
-            ContentView()
+            KitchenView()
                 .tabItem {
                     Label("Order", systemImage: "square.and.pencil")
             }

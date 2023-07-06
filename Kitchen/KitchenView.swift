@@ -32,21 +32,31 @@ struct KitchenView: View {
             }
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(data, id: \.self) { item in
-                    VStack{
-                        AsyncImage(url: URL(string: url5),
-                                               content: { image in
-                                                       image.resizable()
-                                .aspectRatio(contentMode: .fill)
-//                                .resizable()
-                                                    .scaledToFit()
-                                .background(Color(red: 0.97, green: 0.97, blue: 0.96))
-                                                           
-                                                           .cornerRadius(20)
-                                                   },
-                                                   placeholder: {
-                                                       ProgressView()
-                        }).frame(width: 150, height: 100)
+                    VStack(alignment: .center){
+                        
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 100, height: 100)
+                                Color(red: 0.97, green: 0.97, blue: 0.96)
+                            AsyncImage(url: URL(string: url5),
+                                                   content: { image in
+                                                           image.resizable()
+                                    .offset(x: 4,y:9)
+                                    .aspectRatio(contentMode: .fill)
+    //                                .resizable()
+                                                        .scaledToFit()
+    //                                .background(Color(red: 0.97, green: 0.97, blue: 0.96))
+                                                               
+                                                               .cornerRadius(20)
+                                                       },
+                                                       placeholder: {
+                                                           ProgressView()
+                            }).frame(width: 100, height: 100)
+                            
+                        }.cornerRadius(20)
+                        .padding()
                         Text(item)
+                        
                         
                     }
                     
