@@ -10,11 +10,11 @@ import SwiftUI
 struct TabVew: View {
     var body: some View {
         TabView {
-            ContentView()
+            MainView()
                 .tabItem {
                     Label("Order", systemImage: "list.dash")
                 }
-            KitchenView()
+            CategoriesView()
                 .tabItem {
                     Label("Order", systemImage: "square.and.pencil")
             }

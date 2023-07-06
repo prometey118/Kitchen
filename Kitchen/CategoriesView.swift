@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct KitchenView: View {
+struct CategoriesView: View {
     var size = Size()
     let data = (1...10).map { "Item \($0)" }
     let columns = [
@@ -68,7 +68,7 @@ struct KitchenView: View {
 
 struct KitchenView_Previews: PreviewProvider {
     static var previews: some View {
-        KitchenView()
+        CategoriesView()
     }
 }
 func pr() {
