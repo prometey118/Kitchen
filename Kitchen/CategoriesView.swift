@@ -71,6 +71,7 @@ struct Buttons: View {
 }
 
 struct MainCategories: View {
+    @State var isPresented = false
     var size = Size()
     let data = (1...50).map { "Item \($0)" }
     let columns = [
@@ -78,43 +79,86 @@ struct MainCategories: View {
             GridItem(.flexible()),
             GridItem(.flexible())
             ]
+    func pr() {
+        return print("Ss")
+    }
     var body: some View {
-        VStack {
+        ZStack {
             
-            ScrollView(.vertical, showsIndicators: false) {
+            VStack {
                 
-                
-                LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(data, id: \.self) { item in
-                            VStack(alignment: .center){
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 100, height: 100)
-                                    Color(red: 0.97, green: 0.97, blue: 0.96)
-                                    AsyncImage(url: URL(string: url5),
-                                               content: { image in
-                                        image.resizable()
-                                            .offset(x: 4,y:9)
-                                            .aspectRatio(contentMode: .fill)
-                                        //                                .resizable()
-                                            .scaledToFit()
-                                    },
-                                               placeholder: {
-                                        ProgressView()
-                                    }).frame(width: 110, height: 110)
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    
+                    LazyVGrid(columns: columns, spacing: 10) {
+                        ForEach(data, id: \.self) { item in
+                            Button(action: {isPresented = true} ) {
                                     
-                                }.cornerRadius(10)
-                                    .padding()
-                                Text(item)
-                                
+                                    VStack(alignment: .center){
+                                        
+                                        ZStack{
+                                            Rectangle()
+                                                .frame(width: 100, height: 100)
+                                            Color(red: 0.97, green: 0.97, blue: 0.96)
+                                            AsyncImage(url: URL(string: url5),
+                                                       content: { image in
+                                                image.resizable()
+                                                    .offset(x: 4,y:9)
+                                                    .aspectRatio(contentMode: .fill)
+                                                //                                .resizable()
+                                                    .scaledToFit()
+                                            },
+                                                       placeholder: {
+                                                ProgressView()
+                                            }).frame(width: 110, height: 110)
+                                            
+                                        }.cornerRadius(10)
+                                            .padding()
+                                        Text(item)
+                                        
+                                        
+                                        
+                                    }
+                                    
                                 
                             }
-                            
-                        
+                        }
                     }
+                    
+                    
+                    
                 }
             }
+            .overlay(
+                GeometryReader { geometry in
+                    if isPresented {
+                        Color.black.opacity(0.4)
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                isPresented = false
+                            }
+                        
+                        VStack {
+                            Text("Новое представление")
+                                .font(.title)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(10)
+                            
+                            Spacer()
+                        }
+                        .frame(width: 300, height: 300)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                        .padding(.top, geometry.size.height/2 - 150)
+                        .padding(.horizontal, geometry.size.width/2 - 150)
+                    }
+                }
+                )
         }
     }
 }
