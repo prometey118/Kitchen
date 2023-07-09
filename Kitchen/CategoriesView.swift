@@ -138,14 +138,30 @@ struct MainCategories: View {
                                 isPresented = false
                             }
                         
-                        VStack {
-                            Text("Новое представление")
-                                .font(.title)
-                                .padding()
-                                .background(Color.white)
-                                .cornerRadius(10)
+                        VStack(alignment: .center){
                             
-                            Spacer()
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 100, height: 100)
+                                Color(red: 0.97, green: 0.97, blue: 0.96)
+                                AsyncImage(url: URL(string: url5),
+                                           content: { image in
+                                    image.resizable()
+                                        .offset(x: 4,y:9)
+                                        .aspectRatio(contentMode: .fill)
+                                    //                                .resizable()
+                                        .scaledToFit()
+                                },
+                                           placeholder: {
+                                    ProgressView()
+                                }).frame(width: 110, height: 110)
+                                
+                            }.cornerRadius(10)
+                                .padding()
+                            Text("item")
+                            
+                            
+                            
                         }
                         .frame(width: 300, height: 300)
                         .background(Color.white)

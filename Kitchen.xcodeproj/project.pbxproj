@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C437DDBE2A5B12DB00A8539E /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = C437DDBD2A5B12DB00A8539E /* example.json */; };
 		C4B124FA2A55460E00D71E09 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B124F92A55460E00D71E09 /* TabView.swift */; };
 		C4B124FC2A5556E000D71E09 /* KitchenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B124FB2A5556E000D71E09 /* KitchenService.swift */; };
 		C4B124FE2A5556F500D71E09 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B124FD2A5556F500D71E09 /* Kitchen.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C437DDBD2A5B12DB00A8539E /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		C4B124F92A55460E00D71E09 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		C4B124FB2A5556E000D71E09 /* KitchenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenService.swift; sourceTree = "<group>"; };
 		C4B124FD2A5556F500D71E09 /* Kitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
@@ -71,13 +73,14 @@
 				C4B124F92A55460E00D71E09 /* TabView.swift */,
 				C4EBE6082A53F79C00576CAA /* MainView.swift */,
 				C4B124FF2A55580F00D71E09 /* CategoriesView.swift */,
+				C4EBE6162A5403F000576CAA /* KitchensService.swift */,
 				C4EBE60A2A53F79D00576CAA /* Assets.xcassets */,
 				C4EBE60C2A53F79D00576CAA /* Preview Content */,
 				C4EBE6142A54037900576CAA /* Kitchens.swift */,
-				C4EBE6162A5403F000576CAA /* KitchensService.swift */,
 				C4B124FB2A5556E000D71E09 /* KitchenService.swift */,
 				C4EBE6202A5443FE00576CAA /* ScaleScreen.swift */,
 				C4B124FD2A5556F500D71E09 /* Kitchen.swift */,
+				C437DDBD2A5B12DB00A8539E /* example.json */,
 			);
 			path = Kitchen;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				C4EBE60E2A53F79D00576CAA /* Preview Assets.xcassets in Resources */,
 				C4EBE60B2A53F79D00576CAA /* Assets.xcassets in Resources */,
+				C437DDBE2A5B12DB00A8539E /* example.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

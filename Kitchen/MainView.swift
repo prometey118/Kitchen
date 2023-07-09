@@ -8,18 +8,26 @@
 import SwiftUI
 
 struct MainView: View {
+    private var categores: [Categories] = Categories.allCategores
     var body: some View {
+
         NavigationView {
             VStack(spacing: 20) {
+                List {
+                    ForEach(categores, id: \.сategories[0].id) { category in
+                        TextOnImage(text: category.сategories[0].name, url: url)
+                        
+                    }
+                }
                 NavigationLink {
                     CategoriesView()
                 } label: {
                     TextOnImage(text: "Пекарни и кондитерские", url: url)
                 }
                 
-                TextOnImage(text: "Фастфуд", url: url2)
-                TextOnImage(text: "Азиатская кухня", url: url3)
-                TextOnImage(text: "Супы", url: url4)
+//                TextOnImage(text: "Фастфуд", url: url2)
+//                TextOnImage(text: "Азиатская кухня", url: url3)
+//                TextOnImage(text: "Супы", url: url4)
             }
         }
     }
@@ -31,6 +39,7 @@ struct MainView: View {
 
 struct TextOnImage: View {
     var size = Size()
+    var kitchens = [сategories]()
     var text: String
     var url: String
     var body: some View {
