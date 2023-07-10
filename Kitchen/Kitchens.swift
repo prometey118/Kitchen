@@ -6,9 +6,10 @@
 //
 
 import Foundation
+let urlCategores = "https://run.mocky.io/v3/058729bd-1402-4578-88de-265481fd7d54"
 struct Categores: Codable {
     let сategories: [Сategory]
-    static let allCategores: Categores = decode(url: urlD, struct: Categores.self)
+    static let allCategores: Categores = decode(url: urlCategores, struct: Categores.self)
     
 }
 
