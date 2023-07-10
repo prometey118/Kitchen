@@ -72,12 +72,12 @@
 				C4EBE6082A53F79C00576CAA /* MainView.swift */,
 				C4B124FF2A55580F00D71E09 /* CategoriesView.swift */,
 				C4EBE6162A5403F000576CAA /* KitchensService.swift */,
+				C4EBE6142A54037900576CAA /* Kitchens.swift */,
+				C4B124FD2A5556F500D71E09 /* Kitchen.swift */,
+				C4B124FB2A5556E000D71E09 /* KitchenService.swift */,
 				C4EBE60A2A53F79D00576CAA /* Assets.xcassets */,
 				C4EBE60C2A53F79D00576CAA /* Preview Content */,
-				C4EBE6142A54037900576CAA /* Kitchens.swift */,
-				C4B124FB2A5556E000D71E09 /* KitchenService.swift */,
 				C4EBE6202A5443FE00576CAA /* ScaleScreen.swift */,
-				C4B124FD2A5556F500D71E09 /* Kitchen.swift */,
 			);
 			path = Kitchen;
 			sourceTree = "<group>";

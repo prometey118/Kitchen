@@ -11,42 +11,11 @@ let url2 = "https://lh3.googleusercontent.com/fife/APg5EObBNnVU_jTRbXA9hlsqmsxvc
 let url3 = "https://lh3.googleusercontent.com/fife/APg5EOazehR4FoGGQc58Gll7A0LbhlaFKaWZYDtYns2icY2UW7rqPSiZWfW5GqsapOkA7IcjPyImt84b9RQdknKCMXrCoTcYHX_p6SObcDxUL691usexrmSPJWK68NZMZ5downCsE881bBTioNF_ggP-mDH2xeU8RyLYABbckBd_AxJycABkPeLvshdAiAOIafXA9xj2tvFGB17GJ-tF-orcavB79aE9GdbfrLuoomWfj-bcoMeYAYY3li7U3OJq-MATSpv5dDwy-7ZalGwOb9ns-KEACJOi8A3FrGuym5GA68FDTCh4AFJ5zI0m2_1P7OAuiLqHRfjwrFEBITKGSuJjCsjAfLLGRMXjwMep0n3_dTrqv5h5f2Pb6M5oio_Z9ONecBlcOSB7Ny9cSKpvYeLnNHSti4guYUH3lulKgOhpcmjaa63TLFzWIr84jt4NTYc-S3HPUt_4WrAbVXzSCaOSSminySQUlTn3U6Osz9zqfDP7kdTZZAeRDOdMDeoffHwyWeQevYygR1t62QoV42ZLn_UPD1AOQJBi105UaJ3LBkT6_pmIFx8Pzp-TmmBrd37EQQXM10HbVPKaLDPOmTTtrEFCe2KnBJ17a0LyN0QxJOvYshWESquAjkkVUVDQFga6u3qabDjU0BBTK2wylf-zDUlsC8mxETyH6uKuVLFtzr0D7CvY4cDsMQPwPYXWATXcU9ETniYxZdzHaeISuUIF9eEDDtxOgpFRW2GfaDTWWX7cTjUJ8L1h5EyWoczELDmRoMB-mPj2vHgl5Fgbe4D6-OJ7V4b6BmLDM9RnP7BYropTXWooyEcFNWX02d52J57a2yc3gACtvBuLsKUewdutRbsi-6oQkVSywUBSqTAYhERnCJ0g9gyyZMEPVYqwDgvmPqH7Im_Y4QuCiiCDMRI_bdxvAbqKSB5ZStBc3nEH7Bh5dY9iUPn6YjvuHgrgCIUAx2jh8FVKKZNT6dEioqvTnYKs7AHku0STmKM4QDXsEwCnEPtdbIKFvUGKmt_OGf_D-e2ZNpuFgUZhSEUCr7w6G9Ea6pI72WEjHNFLHSju8v50vWqcnk2tmmDTdZUGPmtHyFSe9nJtkK6Yb5FzS9QRo2c_8E26l9Dl6fKgB6caHCXa71pwfkkRCuujFJHe6Itdx4elpyV4Niebw5oIL1_b2n_BGfvuUUvrTpTSAtWJ0qwwUlTqC5zggPHHJMvYy8Z0pnohF6nGsu2a7kNqJHqhQhIrGWsU91AhCZE8TbMeYDn6ednYuGzueczMy_6VjJN4Z1Q8ib4xwsDfQsd7zQ3JPo35JvLzkS5MzS6MJ5a8il-NkdidDvwMzsigVACRblhNDiCJeI-HQJBHvXUBAzXbjFpUaC8TY3iVYu7q2VH8yaG8Lc6JYNk6C4rEv4FwRvDKdiqfw0AIsF0w0cvTeM8S4f2bL_LBwyv-FCAb_HtO8ZyBYovcxYMrWJNowIVJi3lUkmjltDPT8x_IsETrfe4n_hIubt4aWsefl0ffJ7gg-wOK35khfgyMpMy6StqvNngTRbF92Y_8gdC9pk0cAVCLA1vFRSPuZ6gYOSs94P3arZj7sDoUbv2ezOmazXpcUYckos_X70rWhm_msa3wYTLXFh2sFSwn-Wu4pRm6pKDVuJKINilX2IPy=w1366-h617"
 let url4 = "https://lh3.googleusercontent.com/fife/APg5EOYkl52vweri_LftXhwkPxs3KpAnuvGK3D47CgPX84NJtezEi8qE2GGEfYjDHG5QPlqP3a5NnlcoSw0o9XvRzkQytS3G20mqtirOga1ETYZuOFshsxGVH6P2UIr4ZeeCMTzniV6jE2JDbL2TrrEqwypyWLHsKU4IRUhIKeDetZ99n3gfPW9h1Uio67HCxmYPRuiYoZxH2wZ8xEec__-HxOwWvWhb1Yae3fYmmVWCSY7E75H2r-lXPk6NcpWn_zXRer1ksviJSLEiPBHngkGodpcYC4EwjVVYmsUFfeEZuS55w41JlXeLCaxbpMUNU4ThHPso7Cl-WrgBFKLECCXhGVNDPX66mcDu5EFC-vNGzLTfjoFcSOP3-qEr5HYvwC3l8ml8qdkBJ3jN9nyG9lfcLRjryQi-FkJqyhzZlL0o_UCCc0FIMepRfKGRDUaxNcGsYoLN9yjFhpcypA1yZbICt4DOfGLM-IK5RKlgZ23Au-jMxqtiAg-MBbtodtJlCUEaDGVhnF84W4iUyiL7now9wPzOfNS7fis89jgEot5sT-Q3FJy2T9RzBuh3R3KnGGyOx88tYtkpsZq4Sy-tWF_H8VfyaISYOBJx204XpEW0Z0mxuIqGN57Mku49Pzq_I7BvztHa_1Onq1jBWNcW1irtjfQWdzIwEz0se8zCq-aOp0CGp4neExmhfuh4LZ16Yb55IK6e2cMQj4AUahb1ze6jQJfRllZDdXwUNZMyErBswimfmuuoeF47gm2IvBGP2cbozdZLlBYwMQUbuiab96yA7rF__2ghfqyy5mI5CB5rnKgPPkMFw-fKFV7IvmPVk-Fb2K8DCBVQSeAY0njuvebCN18D_h10E0YRXmAwWFdhk0HWTVILUpF9COS-kbLmAzZ7zOY3ZW_5bA8chl3E8RZ1Vi-e1izPTRE2s4kH7SZvn9VepHita0Uhix-03hSHZFpxYC0eZP0tSaXaUUxmzNTAT8Q-ZyVIc3NMUtqu1ZIaC1Z6hDI4AqaM1Yxgf7whXYS9LfKfyvKSW8EBTmgCSBHdhaZuhiQwO9gcwkScCxbtwjjTx0cWEiAel95YVEFMluyHO5laNaVDRfS9t_VeIjO4B9eaBjK4TLLs2uywZEQUlW3RYraj53RjPA1Cu0SHJQGwtQ8TAU27RnsEdWk4MfpVXHpnpryOVK_SendFlLHygtfHskhx_dSzgrRZgwi_0jaTW0x7n0uNq_YVdFV6QwSDByrGBY3nrovIGvHTodQk-4hXyFIj6BtgVOA6ZyzbA3kJ0Fh-y0YE6-kHxKh-C54-YpshnpdmYqmZOci2AqxwJX1ueVCEPaJdrjqcZORS41Na6qmZFsWzBSve4__Zb6juB_MDxaenbNZsmT7_uQI4DDTGqgHA1h40-VfCEDYvJDIyoKrPj-WbvoQiJ_Ya3zFgZ9hB8LwxdAocpbIK3uQNIKwqhz9v6c4cs7AjKAqD5PTTod24iSSHyYdn5n1vjBQg_euJOexGY41IhOkGCCtAe94HHq-8MDve8bR8ffrsYyuO2b1EbPRfBsooHBG3mVMRa8gO9NGm0BtG-uslHUhLwWQewtqX_BlyWUYz5vD4Ke3AZnCh8tj5bBgcG2Z22qKcqbiTv40ADHBY5RdwbWhAiqO8DmLoteWJ=w1366-h617"
 let url5 = "https://lh3.googleusercontent.com/fife/APg5EOb3-gGunBAb_3E7L5qZLGIx0Wm8kh4UjNn2yow-7Kvf50D7eFb9Iw5g_7W7TQLGKF29-G6VNa7dHS_zEWY8VaSMh9EqUql8UEFISB_WWgiO8nf_mt0YtUhsWFB5uzw-Bfi_eS9Cs-0vLUMiqaqTGgGFDvVhUvak4AypPMEbt2-3mEkxeZNcClEy29x8gEmUU6e9G8s5GDyCxR404OIsgnGHqtIaGIGD7afRoz7PtgtmZdlXC5v7dHujDNh5l28v249qxjpa1rqxoorBb-ywkRsu1bzqDEHGbRDnFNLXHwEGlHoLS1krz9KcD3opkmQckg7-m7PXzEhnQlayqMPiNGP-WpnFYrthFVfJ0TY4zsYFx1azSJZTLa59Xuqr32eagNn9xF6mCPpGqRbunBKrbD-oWidQ_iAXZRRrgjZrv280Joe8z73AluN0A-mXcqRkpVwQo1n3szZ00wX7sD44PriRwHGUfEenTC5IyLVv3MBsYMNXJ9ALa6FZgTrnUhO_ePGoPftELYGNp4yn-xkzfM_GvnQR8A6od0bR8AqqpNketd0kBavJTkaJXBwsfvxinTdLfOTfWsZAhF97XYNEA_9SmTgnnOjt3N8YUxmUeWcor174r7bNdDuDQqq7vWRgFZNorh5v6LANRk0CVsq6B9tVxP2R1zTCc1yXgpu4kNGJsEvNyxMRy-yM3cBvhu01ZUFSalvwAqcS2M9_eBoPCu00KVtcEvyFPoqm_QNHBEkDLjUdtJC7BGcmv7SPa-rV6oH_3zeIYstyKLrgN-Dzewe816A6J7IN4YxSvCIOWbNV9Q6O3hxua_ZrGSk6ijSoBKE0XHUC04cr1O6BzRxL9lwVUhzvBzYfzmBzMPb84Pq-WwBtfCxN2j34NReGu5iABuA1iDNgz0r8WE2Dvvz0XsD6Uc8neX57A7_19J6vyJEhuARJREXGs4tFWHMmjqg-xwYOOPJhxF1BkCaQrUEKtFYBq1pT2N7_h9fMV8JOLP92grJFHRP6TmNrEjPAf9HjfYRFouBAqFMRy614VrJu5hyweBcy-4WbJNYqrvKZH_bXIQyZ6qlv4omHhGTSMMT9cAYTyiMm12bEH5ccThAygPaXlfx6ydA3towLnMpoq0ieByM2-Nql2uh4xPxgAHcmzipRgEqlYDflDKNSfeTVFKKQ4vtTWa43wR505BTjdO3mk5CVoK4sOzwcF1mQA2joVXdW63wbUWtw4wtfa3e9EP1TV01b5M02KKPcr2yxZpNQCo8-Igp6M8t_vqWSKlkq-Z7NaRswW-xQyuFWjCufwgpd1m8i5Z4tnL72DhelmIiI2cXufJb70_eobyMV5VsMUab1nLKWoKwggolnEjl2A1PLrv6T0aRTYmjt3JqFDEV58aIjZhhyrcX6h6Bb_AJzc-OFvFPw1uAuswJaimihZUfYoVuwtNRI27BD7KGnXzMHKthOM4fArK3ICIt61g91DNHAu9qhpWxsj0FrcmujdWE2vJpBf7XoOcgxiRlRKpljQ2c3M6ULTdS1nuypZleouOtwIHOUoxGtT5HJeC8ZcsgI3przMt97iGmSv5Us7xL0j42wVNZbQnyQ6EsIyIG1ZOo2ah9CyA7RqixQUevdzbPhSnJk2w6weuuRCDkdC4H97doLyAV_=w1366-h617"
-struct Categores: Codable {
-    let сategories: [Сategory]
-    static let allCategores: Categores = decode()
-}
 
-struct Сategory: Codable {
-    let id: Int
-    let name: String
-    let imageURL: String
-//    static let allCategory: [Сategory] = decode()
-    enum CodingKeys: String, CodingKey {
-            case id, name
-            case imageURL = "image_url"
-        }
-}
 let urlD = "https://run.mocky.io/v3/058729bd-1402-4578-88de-265481fd7d54"
-//extension Bundle {
-//    func decode<T: Decodable>() -> T {
-//        guard let urlD = URL(string: urlD) else {
-//        fatalError("Could not URL")
-//
-//        }
-//        guard let data = try? Data(contentsOf: urlD) else {
-//            fatalError("problems with Data")
-//        }
-//        let temp:String = String(data: data as Data, encoding: String.Encoding.utf8)!
-//        let decoder = JSONDecoder()
-//        guard let loadedData = try? decoder.decode(T.self, from: data) else {
-//            fatalError("cannot loadedData")
-//        }
-//        return loadedData
-//    }
-//
-//}
-func decode() -> Categores {
-    guard let urlD = URL(string: urlD) else {
+
+func decode<T: Decodable>(url:String, struct: T.Type) -> T {
+    guard let urlD = URL(string: url) else {
     fatalError("Could not URL")
         
     }
@@ -54,7 +23,7 @@ func decode() -> Categores {
         fatalError("problems with Data")
     }
     let decoder = JSONDecoder()
-    guard let loadedData = try? decoder.decode(Categores.self, from: data) else {
+    guard let loadedData = try? decoder.decode(T.self, from: data) else {
         fatalError("cannot loadedData")
     }
     return loadedData

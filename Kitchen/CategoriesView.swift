@@ -71,17 +71,15 @@ struct Buttons: View {
 }
 
 struct MainCategories: View {
+    private let allDish: Kitchen = Kitchen.allDishes
     @State var isPresented = false
     var size = Size()
-    let data = (1...50).map { "Item \($0)" }
+//    let data = (1...50).map { "Item \($0)" }
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
             GridItem(.flexible())
             ]
-    func pr() {
-        return print("Ss")
-    }
     var body: some View {
         ZStack {
             
@@ -91,7 +89,7 @@ struct MainCategories: View {
                     
                     
                     LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(data, id: \.self) { item in
+                        ForEach(allDish.dishes, id: \.id) { dish in
                             Button(action: {isPresented = true} ) {
                                     
                                     VStack(alignment: .center){
@@ -100,7 +98,7 @@ struct MainCategories: View {
                                             Rectangle()
                                                 .frame(width: 100, height: 100)
                                             Color(red: 0.97, green: 0.97, blue: 0.96)
-                                            AsyncImage(url: URL(string: url5),
+                                            AsyncImage(url: URL(string: dish.imageURL),
                                                        content: { image in
                                                 image.resizable()
                                                     .offset(x: 4,y:9)
@@ -114,7 +112,7 @@ struct MainCategories: View {
                                             
                                         }.cornerRadius(10)
                                             .padding()
-                                        Text(item)
+                                        Text(dish.name)
                                         
                                         
                                         

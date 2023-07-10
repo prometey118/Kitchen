@@ -14,7 +14,19 @@ struct MainView: View {
             VStack(spacing: 20) {
                     ForEach(categores.сategories, id: \.id) { category in
                         NavigationLink {
-                            CategoriesView()
+                            switch category.id
+                            {
+                            case 1:
+                                CategoriesView()
+                            case 2:
+                                AsianKitchen()
+                            case 3:
+                                CategoriesView()
+                            case 4:
+                                CategoriesView()
+                            default:
+                                CategoriesView()
+                            }
                         } label: {
                             TextOnImage(text: category.name, url: category.imageURL)
                         }
@@ -30,7 +42,7 @@ struct MainView: View {
 
 struct TextOnImage: View {
     var size = Size()
-    var kitchens = [сategories]()
+    var kitchens = [Categores]()
     var text: String
     var url: String
     var body: some View {
