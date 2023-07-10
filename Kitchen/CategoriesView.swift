@@ -23,11 +23,11 @@ struct CategoriesView: View {
             case 0:
                 MainCategories()
             case 1:
-                AsianKitchen()
+                AsianKitchen(teg: Teg.салаты)
             case 2:
-                MainCategories()
+                AsianKitchen(teg: Teg.сРисом)
             case 3:
-                MainCategories()
+                AsianKitchen(teg: Teg.сРыбой)
             default:
                 MainCategories()
             }
@@ -39,30 +39,71 @@ struct CategoriesView: View {
 
 struct Buttons: View {
     @Binding var mainTemp: Int
+    var size = Size()
     private let dish = Kitchen.allDishes
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack{
-                Button("Все меню") {
-                    withAnimation {
-                        mainTemp = 0
-                    }
+                Button {
+                    mainTemp = 0
+                } label: {
+                    Rectangle()
+                        .cornerRadius(10)
+                        .frame(width: size.scaleWidthForDish(94), height: size.scaleHeight(35))
+                        .foregroundColor(mainTemp == 0 ? .blue : Color(red: 0.97, green: 0.97, blue: 0.96))
+                        .overlay {
+                            Text("Все меню")
+                                .foregroundColor(mainTemp == 0 ? .white : .black)
+                        }
+                    
+                        
                 }
-                .buttonStyle(.borderedProminent)
-                Button("Салаты") {
-                    withAnimation {
-                        mainTemp = 1
-                    }
+                
+
+                Button {
+                    mainTemp = 1
+                } label: {
+                    Rectangle()
+                        .cornerRadius(10)
+                        .frame(width: size.scaleWidthForDish(94), height: size.scaleHeight(35))
+                        .foregroundColor(mainTemp == 1 ? .blue : Color(red: 0.97, green: 0.97, blue: 0.96))
+                        .overlay {
+                            Text("Салаты")
+                                .foregroundColor(mainTemp == 1 ? .white : .black)
+                        }
+                    
+                        
                 }
-                .buttonStyle(.borderedProminent)
-                Button("С рисом") {
+                
+                Button {
                     mainTemp = 2
+                } label: {
+                    Rectangle()
+                        .cornerRadius(10)
+                        .frame(width: size.scaleWidthForDish(94), height: size.scaleHeight(35))
+                        .foregroundColor(mainTemp == 2 ? .blue : Color(red: 0.97, green: 0.97, blue: 0.96))
+                        .overlay {
+                            Text("С рыбой")
+                                .foregroundColor(mainTemp == 2 ? .white : .black)
+                        }
+                    
+                        
                 }
-                .buttonStyle(.borderedProminent)
-                Button("С рыбой") {
+            
+                Button {
                     mainTemp = 3
+                } label: {
+                    Rectangle()
+                        .cornerRadius(10)
+                        .frame(width: size.scaleWidthForDish(94), height: size.scaleHeight(35))
+                        .foregroundColor(mainTemp == 3 ? .blue : Color(red: 0.97, green: 0.97, blue: 0.96))
+                        .overlay {
+                            Text("С рисом")
+                                .foregroundColor(mainTemp == 3 ? .white : .black)
+                        }
+                    
+                        
                 }
-                .buttonStyle(.borderedProminent)
             }
             .padding(5)
             .padding(.top)
@@ -179,10 +220,9 @@ struct MainCategories: View {
 
 struct AsianKitchen: View {
     var size = Size()
-//    var: String
+    var teg: Teg
     let allDish = Kitchen.allDishes
 //    var data = (1...50).map { "Item \($0)" }
-    @State private var searchTerm = "Салаты"
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
@@ -190,7 +230,7 @@ struct AsianKitchen: View {
             ]
     
     var body: some View {
-        let desiredTeg = Teg.салаты
+        let desiredTeg = teg
         let filteredDishes = allDish.dishes.filter { $0.tegs.contains(desiredTeg) }
 
         //

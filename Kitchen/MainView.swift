@@ -19,7 +19,7 @@ struct MainView: View {
                             case 1:
                                 CategoriesView()
                             case 2:
-                                AsianKitchen()
+                                CategoriesView()
                             case 3:
                                 CategoriesView()
                             case 4:
