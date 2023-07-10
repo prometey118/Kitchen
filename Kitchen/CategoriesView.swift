@@ -155,11 +155,15 @@ struct MainCategories: View {
                                             },
                                                        placeholder: {
                                                 ProgressView()
-                                            }).frame(width: 110, height: 110)
+                                            }).frame(width: 120, height: 140)
                                             
                                         }.cornerRadius(10)
                                             .padding()
                                         Text(dish.name)
+                                            .font(Font.custom("SF Pro Display", size: 14))
+                                            .kerning(0.14)
+                                            .foregroundColor(.black)
+                                            .frame(width: 100, height: 40)
                                     }
                             }
                         }
@@ -204,10 +208,12 @@ struct MainCategories: View {
                                     .font(Font.custom("SF Pro Display", size: 14))
                                     .frame(width:340)
 //                                button to shoplist
-                                Button("Add to Shopping List") {
+                                Button("Добавить в корзину") {
                                     shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
                                             }
+                                
                             }
+                            
                             .frame(width: 350, height: 400)
                             .background(Color.white)
                             .cornerRadius(10)
@@ -228,6 +234,9 @@ struct MainCategories: View {
 
 struct AsianKitchen: View {
     var size = Size()
+    @State var selectedId: Int = 1
+    @State var isPresented = false
+    @EnvironmentObject private var shoppingList: ShoppingList
     var teg: Teg
     let allDish = Kitchen.allDishes
     let columns = [
@@ -249,7 +258,12 @@ struct AsianKitchen: View {
                 
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(filteredDishes, id: \.id) { dish in
-                            VStack(alignment: .center){
+                        Button(action: {
+                            selectedId = dish.id
+                            isPresented = true
+                            
+                        } ) {
+                        VStack(alignment: .center){
                             
                             ZStack{
                                 Rectangle()
@@ -268,11 +282,15 @@ struct AsianKitchen: View {
                                 
                             }.cornerRadius(10)
                                 .padding()
-                                Text(dish.name)
+                            Text(dish.name)
+                                .font(Font.custom("SF Pro Display", size: 14))
+                                .kerning(0.14)
+                                .foregroundColor(.black)
+                                .frame(width: 100, height: 40)
                             
                             
                         }
-                        
+                    }
                                 
                             
                         
@@ -280,6 +298,62 @@ struct AsianKitchen: View {
                 }
             }
         }
+        .overlay(
+            GeometryReader { geometry in
+                if let selectedDish = allDish.dishes.first(where: { $0.id == selectedId }) {
+                    if isPresented {
+                        Color.black.opacity(0.4)
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                isPresented = false
+                            }
+                        VStack(alignment: .center){
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 100, height: 100)
+                                Color(red: 0.97, green: 0.97, blue: 0.96)
+                                AsyncImage(url: URL(string: selectedDish.imageURL),
+                                           content: { image in
+                                    image.resizable()
+                                        .offset(x: 4,y:9)
+                                        .aspectRatio(contentMode: .fill)
+                                        .scaledToFit()
+                                },
+                                           placeholder: {
+                                    ProgressView()
+                                }).frame(width: 110, height: 90)
+                                
+                            }.cornerRadius(10)
+                                .padding()
+                            Text(selectedDish.name)
+                            HStack(alignment: .bottom) {
+                                Text(String(selectedDish.price)+"₽")
+                                    .font(Font.custom("SF Pro Display", size: 14))
+                                Text(String(selectedDish.weight)+"г.")
+                                    .font(Font.custom("SF Pro Display", size: 14))
+                            }
+                            Text(selectedDish.description)
+                                .font(Font.custom("SF Pro Display", size: 14))
+                                .frame(width:340)
+//                                button to shoplist
+                            Button("Add to Shopping List") {
+                                shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
+                                        }
+                        }
+                        .frame(width: 350, height: 400)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                        .padding(.top, geometry.size.height/2 - 200)
+                        .padding(.horizontal, geometry.size.width/2 - 175)
+                    }
+                }
+                
+            }
+            )
         
     }
 }
