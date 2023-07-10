@@ -202,6 +202,7 @@ struct MainCategories: View {
                                 }
                                 Text(selectedDish.description)
                                     .font(Font.custom("SF Pro Display", size: 14))
+                                    .frame(width:340)
 //                                button to shoplist
                                 Button("Add to Shopping List") {
                                     shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
@@ -259,7 +260,6 @@ struct AsianKitchen: View {
                                     image.resizable()
                                         .offset(x: 4,y:9)
                                         .aspectRatio(contentMode: .fill)
-                                    //                                .resizable()
                                         .scaledToFit()
                                 },
                                            placeholder: {

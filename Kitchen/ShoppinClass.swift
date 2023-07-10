@@ -10,9 +10,10 @@ class ShoppingList: ObservableObject {
     @Published private(set) var items: [ShoppingItem] = []
     @Published private(set) var dict: [String: Int] = [:]
     func addItem(_ item: ShoppingItem) {
-        items.append(item)
+        
         if dict[item.name] == nil {
             dict[item.name] = 1
+            items.append(item)
         } else { dict[item.name]! += 1 }
     }
 }
