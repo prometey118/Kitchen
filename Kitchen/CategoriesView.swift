@@ -117,6 +117,7 @@ struct MainCategories: View {
     let allDish: Kitchen = Kitchen.allDishes
     @State var isPresented = false
     @State var selectedId: Int = 1
+    @EnvironmentObject private var shoppingList: ShoppingList
     var size = Size()
     let columns = [
             GridItem(.flexible()),
@@ -193,12 +194,18 @@ struct MainCategories: View {
                                 }.cornerRadius(10)
                                     .padding()
                                 Text(selectedDish.name)
-                                HStack {
+                                HStack(alignment: .bottom) {
                                     Text(String(selectedDish.price)+"₽")
+                                        .font(Font.custom("SF Pro Display", size: 14))
                                     Text(String(selectedDish.weight)+"г.")
+                                        .font(Font.custom("SF Pro Display", size: 14))
                                 }
                                 Text(selectedDish.description)
-                                
+                                    .font(Font.custom("SF Pro Display", size: 14))
+//                                button to shoplist
+                                Button("Add to Shopping List") {
+                                    shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
+                                            }
                             }
                             .frame(width: 350, height: 400)
                             .background(Color.white)

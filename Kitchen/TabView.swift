@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabVew: View {
+    @StateObject private var shoppingList = ShoppingList()
     var body: some View {
         TabView {
             MainView()
@@ -18,8 +19,15 @@ struct TabVew: View {
                 .tabItem {
                     Label("Order", systemImage: "square.and.pencil")
             }
+            BasketView()
+                .tabItem {
+                    Label("Order", systemImage: "square.and.pencil")
+                }
         }
+        
+        .environmentObject(shoppingList)
     }
+        
 }
 
 struct TabView_Previews: PreviewProvider {
