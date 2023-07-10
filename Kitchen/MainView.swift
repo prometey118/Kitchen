@@ -8,26 +8,17 @@
 import SwiftUI
 
 struct MainView: View {
-    private var categores: [Categories] = Categories.allCategores
+    private var categores: Categores = Categores.allCategores
     var body: some View {
-
         NavigationView {
             VStack(spacing: 20) {
-                List {
-                    ForEach(categores, id: \.сategories[0].id) { category in
-                        TextOnImage(text: category.сategories[0].name, url: url)
-                        
+                    ForEach(categores.сategories, id: \.id) { category in
+                        NavigationLink {
+                            CategoriesView()
+                        } label: {
+                            TextOnImage(text: category.name, url: category.imageURL)
+                        }
                     }
-                }
-                NavigationLink {
-                    CategoriesView()
-                } label: {
-                    TextOnImage(text: "Пекарни и кондитерские", url: url)
-                }
-                
-//                TextOnImage(text: "Фастфуд", url: url2)
-//                TextOnImage(text: "Азиатская кухня", url: url3)
-//                TextOnImage(text: "Супы", url: url4)
             }
         }
     }
