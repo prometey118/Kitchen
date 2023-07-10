@@ -163,7 +163,7 @@ struct MainCategories: View {
                                             .font(Font.custom("SF Pro Display", size: 14))
                                             .kerning(0.14)
                                             .foregroundColor(.black)
-                                            .frame(width: 100, height: 40)
+                                            .frame(width: 120, height: 40)
                                     }
                             }
                         }
@@ -296,7 +296,7 @@ struct AsianKitchen: View {
                                 .font(Font.custom("SF Pro Display", size: 14))
                                 .kerning(0.14)
                                 .foregroundColor(.black)
-                                .frame(width: 100, height: 40)
+                                .frame(width: 120, height: 40)
                             
                             
                         }
