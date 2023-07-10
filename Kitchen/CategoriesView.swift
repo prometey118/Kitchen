@@ -208,9 +208,23 @@ struct MainCategories: View {
                                     .font(Font.custom("SF Pro Display", size: 14))
                                     .frame(width:340)
 //                                button to shoplist
-                                Button("Добавить в корзину") {
+//                                Button("Добавить в корзину") {
+//                                    shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
+//                                            }
+                                Button {
                                     shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
-                                            }
+                                } label: {
+                                    Rectangle()
+                                        .cornerRadius(10)
+                                        .frame(width: size.scaleWidthForDish(200), height: size.scaleHeight(35))
+                                        .foregroundColor(Color.blue)
+                                        .overlay {
+                                            Text("Добавить в корзину")
+                                                .foregroundColor(Color.white)
+                                        }
+                                    
+                                        
+                                }
                                 
                             }
                             
