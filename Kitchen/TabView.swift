@@ -13,15 +13,15 @@ struct TabVew: View {
         TabView {
             MainView()
                 .tabItem {
-                    Label("Order", systemImage: "house")
+                    Label("Главная", systemImage: "house")
                 }
             CategoriesView()
                 .tabItem {
-                    Label("Order", systemImage: "magnifyingglass")
+                    Label("Поиск", systemImage: "magnifyingglass")
             }
             BasketView()
                 .tabItem {
-                    Label("Order", systemImage: "basket")
+                    Label("Корзина", systemImage: "basket")
                 }
         }
         
