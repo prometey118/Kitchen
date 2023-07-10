@@ -58,7 +58,7 @@ struct BasketView: View {
                             
                         }
                     }
-                    .navigationBarTitle("Shopping List")
+                    .navigationBarTitle("Корзина")
                 }
     }
 }
