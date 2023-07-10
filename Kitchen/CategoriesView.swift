@@ -207,10 +207,6 @@ struct MainCategories: View {
                                 Text(selectedDish.description)
                                     .font(Font.custom("SF Pro Display", size: 14))
                                     .frame(width:340)
-//                                button to shoplist
-//                                Button("Добавить в корзину") {
-//                                    shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
-//                                            }
                                 Button {
                                     shoppingList.addItem(ShoppingItem(name: selectedDish.name, weight: String(selectedDish.weight), price: String(selectedDish.price), image: selectedDish.imageURL))
                                 } label: {
