@@ -114,8 +114,9 @@ struct Buttons: View {
 }
 
 struct MainCategories: View {
-    private let allDish: Kitchen = Kitchen.allDishes
+    let allDish: Kitchen = Kitchen.allDishes
     @State var isPresented = false
+    @State var selectedId: Int = 1
     var size = Size()
     let columns = [
             GridItem(.flexible()),
@@ -132,7 +133,11 @@ struct MainCategories: View {
                     
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(allDish.dishes, id: \.id) { dish in
-                            Button(action: {isPresented = true} ) {
+                            Button(action: {
+                                selectedId = dish.id
+                                isPresented = true
+                                
+                            } ) {
                                     
                                     VStack(alignment: .center){
                                         
@@ -154,64 +159,59 @@ struct MainCategories: View {
                                         }.cornerRadius(10)
                                             .padding()
                                         Text(dish.name)
-                                        
-                                        
-                                        
                                     }
-                                    
-                                
                             }
                         }
                     }
-                    
-                    
-                    
                 }
             }
             .overlay(
                 GeometryReader { geometry in
-                    if isPresented {
-                        Color.black.opacity(0.4)
-                            .edgesIgnoringSafeArea(.all)
-                            .onTapGesture {
-                                isPresented = false
-                            }
-                        
-                        VStack(alignment: .center){
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 100, height: 100)
-                                Color(red: 0.97, green: 0.97, blue: 0.96)
-                                AsyncImage(url: URL(string: url5),
-                                           content: { image in
-                                    image.resizable()
-                                        .offset(x: 4,y:9)
-                                        .aspectRatio(contentMode: .fill)
-                                    //                                .resizable()
-                                        .scaledToFit()
-                                },
-                                           placeholder: {
-                                    ProgressView()
-                                }).frame(width: 110, height: 110)
+                    if let selectedDish = allDish.dishes.first(where: { $0.id == selectedId }) {
+                        if isPresented {
+                            Color.black.opacity(0.4)
+                                .edgesIgnoringSafeArea(.all)
+                                .onTapGesture {
+                                    isPresented = false
+                                }
+                            VStack(alignment: .center){
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 100, height: 100)
+                                    Color(red: 0.97, green: 0.97, blue: 0.96)
+                                    AsyncImage(url: URL(string: selectedDish.imageURL),
+                                               content: { image in
+                                        image.resizable()
+                                            .offset(x: 4,y:9)
+                                            .aspectRatio(contentMode: .fill)
+                                            .scaledToFit()
+                                    },
+                                               placeholder: {
+                                        ProgressView()
+                                    }).frame(width: 110, height: 110)
+                                    
+                                }.cornerRadius(10)
+                                    .padding()
+                                Text(selectedDish.name)
+                                HStack {
+                                    Text(String(selectedDish.price)+"₽")
+                                    Text(String(selectedDish.weight)+"г.")
+                                }
+                                Text(selectedDish.description)
                                 
-                            }.cornerRadius(10)
-                                .padding()
-                            Text("item")
-                            
-                            
-                            
+                            }
+                            .frame(width: 350, height: 400)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.black, lineWidth: 1)
+                            )
+                            .padding(.top, geometry.size.height/2 - 200)
+                            .padding(.horizontal, geometry.size.width/2 - 175)
                         }
-                        .frame(width: 300, height: 300)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.black, lineWidth: 1)
-                        )
-                        .padding(.top, geometry.size.height/2 - 150)
-                        .padding(.horizontal, geometry.size.width/2 - 150)
                     }
+                    
                 }
                 )
         }
@@ -222,7 +222,6 @@ struct AsianKitchen: View {
     var size = Size()
     var teg: Teg
     let allDish = Kitchen.allDishes
-//    var data = (1...50).map { "Item \($0)" }
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
