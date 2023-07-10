@@ -24,6 +24,8 @@ struct CategoriesView: View {
                 MainCategories()
             case 1:
                 AsianKitchen()
+            case 2:
+                MainCategories()
             case 3:
                 MainCategories()
             default:
@@ -37,6 +39,7 @@ struct CategoriesView: View {
 
 struct Buttons: View {
     @Binding var mainTemp: Int
+    private let dish = Kitchen.allDishes
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack{
@@ -44,20 +47,19 @@ struct Buttons: View {
                     withAnimation {
                         mainTemp = 0
                     }
-//                    mainTemp = 0
                 }
                 .buttonStyle(.borderedProminent)
-                Button("Item 2") {
+                Button("Салаты") {
                     withAnimation {
                         mainTemp = 1
                     }
                 }
                 .buttonStyle(.borderedProminent)
-                Button("Все меню") {
+                Button("С рисом") {
                     mainTemp = 2
                 }
                 .buttonStyle(.borderedProminent)
-                Button("Все меню") {
+                Button("С рыбой") {
                     mainTemp = 3
                 }
                 .buttonStyle(.borderedProminent)
@@ -74,7 +76,6 @@ struct MainCategories: View {
     private let allDish: Kitchen = Kitchen.allDishes
     @State var isPresented = false
     var size = Size()
-//    let data = (1...50).map { "Item \($0)" }
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
@@ -103,7 +104,6 @@ struct MainCategories: View {
                                                 image.resizable()
                                                     .offset(x: 4,y:9)
                                                     .aspectRatio(contentMode: .fill)
-                                                //                                .resizable()
                                                     .scaledToFit()
                                             },
                                                        placeholder: {
@@ -179,48 +179,55 @@ struct MainCategories: View {
 
 struct AsianKitchen: View {
     var size = Size()
-    var data = (1...50).map { "Item \($0)" }
-    @State private var searchTerm = "Item 2"
-    var filteredItems: [String] {
-            return data.filter { $0.contains(searchTerm) }
-        }
+//    var: String
+    let allDish = Kitchen.allDishes
+//    var data = (1...50).map { "Item \($0)" }
+    @State private var searchTerm = "Салаты"
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
             GridItem(.flexible())
             ]
+    
     var body: some View {
+        let desiredTeg = Teg.салаты
+        let filteredDishes = allDish.dishes.filter { $0.tegs.contains(desiredTeg) }
+
+        //
+
         VStack {
             
             ScrollView(.vertical, showsIndicators: false) {
                 
                 
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(filteredItems, id: \.self) { item in
+                    ForEach(filteredDishes, id: \.id) { dish in
                             VStack(alignment: .center){
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 100, height: 100)
+                                Color(red: 0.97, green: 0.97, blue: 0.96)
+                                AsyncImage(url: URL(string: dish.imageURL),
+                                           content: { image in
+                                    image.resizable()
+                                        .offset(x: 4,y:9)
+                                        .aspectRatio(contentMode: .fill)
+                                    //                                .resizable()
+                                        .scaledToFit()
+                                },
+                                           placeholder: {
+                                    ProgressView()
+                                }).frame(width: 110, height: 110)
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 100, height: 100)
-                                    Color(red: 0.97, green: 0.97, blue: 0.96)
-                                    AsyncImage(url: URL(string: url5),
-                                               content: { image in
-                                        image.resizable()
-                                            .offset(x: 4,y:9)
-                                            .aspectRatio(contentMode: .fill)
-                                        //                                .resizable()
-                                            .scaledToFit()
-                                    },
-                                               placeholder: {
-                                        ProgressView()
-                                    }).frame(width: 110, height: 110)
-                                    
-                                }.cornerRadius(10)
-                                    .padding()
-                                Text(item)
+                            }.cornerRadius(10)
+                                .padding()
+                                Text(dish.name)
+                            
+                            
+                        }
+                        
                                 
-                                
-                            }
                             
                         
                     }
