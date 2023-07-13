@@ -69,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B124F92A55460E00D71E09 /* TabView.swift */,
+				C48E7E7D2A605A7A0034606E /* Coordinator */,
 				C48E7E7A2A6059720034606E /* MainView */,
 				C48E7E792A60581F0034606E /* BasketView */,
 				C48E7E772A60575A0034606E /* Categories */,
@@ -122,7 +123,7 @@
 		C4EBE5FA2A53F79C00576CAA = {
 			isa = PBXGroup;
 			children = (
-				C48E7E7D2A605A7A0034606E /* Coordinator */,
+				C48E7E782A6057A30034606E /* TabView */,
 				C4EBE6052A53F79C00576CAA /* Kitchen */,
 				C4EBE6042A53F79C00576CAA /* Products */,
 			);
@@ -141,7 +142,6 @@
 			children = (
 				C4EBE6062A53F79C00576CAA /* KitchenApp.swift */,
 				C4EBE6162A5403F000576CAA /* KitchensViewModel.swift */,
-				C48E7E782A6057A30034606E /* TabView */,
 				C48E7E7F2A605C370034606E /* Settnigs */,
 				C4B125012A56A90D00D71E09 /* Info.plist */,
 				C4EBE60A2A53F79D00576CAA /* Assets.xcassets */,
