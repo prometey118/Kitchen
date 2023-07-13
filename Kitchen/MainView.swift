@@ -16,19 +16,6 @@ struct MainView: View {
                     ForEach(categores.сategories, id: \.id) { category in
                         NavigationLink {
                             coordinator.build(.categories)
-//                            switch category.id
-//                            {
-//                            case 1:
-//                                CategoriesView()
-//                            case 2:
-//                                CategoriesView()
-//                            case 3:
-//                                CategoriesView()
-//                            case 4:
-//                                CategoriesView()
-//                            default:
-//                                CategoriesView()
-//                            }
                         } label: {
                             TextOnImage(text: category.name, url: category.imageURL)
                         }

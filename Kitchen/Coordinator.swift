@@ -7,7 +7,7 @@
 
 import SwiftUI
 enum Page: String, Identifiable {
-    case categories, basket, mainView
+    case categories, basket, mainView, tabVew
     var id: String {
         self.rawValue
     }
@@ -33,6 +33,8 @@ class Coordinator: ObservableObject {
             CategoriesView()
         case .basket:
             BasketView()
+        case .tabVew:
+            TabVew()
         }
     }
 }
