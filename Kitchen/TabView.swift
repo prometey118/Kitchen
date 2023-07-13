@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TabVew: View {
-    @StateObject private var shoppingList = ShoppingList()
     var body: some View {
         TabView {
             MainView()
@@ -25,7 +24,6 @@ struct TabVew: View {
                 }
         }
         
-        .environmentObject(shoppingList)
     }
         
 }

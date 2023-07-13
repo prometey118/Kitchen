@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CoordinatorView: View {
+    @StateObject private var shoppingList = ShoppingList()
     @StateObject private var coordinator = Coordinator()
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -18,6 +19,7 @@ struct CoordinatorView: View {
                 }
         }
         .environmentObject(coordinator)
+        .environmentObject(shoppingList)
     }
 }
 
