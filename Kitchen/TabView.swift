@@ -11,7 +11,7 @@ struct TabVew: View {
     @StateObject private var shoppingList = ShoppingList()
     var body: some View {
         TabView {
-            CoordinatorView()
+            MainView()
                 .tabItem {
                     Label("Главная", systemImage: "house")
                 }
@@ -24,6 +24,7 @@ struct TabVew: View {
                     Label("Корзина", systemImage: "basket")
                 }
         }
+        
         .environmentObject(shoppingList)
     }
         
