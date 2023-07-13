@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C412C0EE2A5C3BE700C11BA6 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412C0ED2A5C3BE700C11BA6 /* BasketView.swift */; };
 		C412C0F02A5C408E00C11BA6 /* ShoppinClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412C0EF2A5C408E00C11BA6 /* ShoppinClass.swift */; };
+		C48E7E742A602E600034606E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E7E732A602E600034606E /* Coordinator.swift */; };
+		C48E7E762A6037E70034606E /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E7E752A6037E70034606E /* CoordinatorView.swift */; };
 		C4B124FA2A55460E00D71E09 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B124F92A55460E00D71E09 /* TabView.swift */; };
 		C4B124FC2A5556E000D71E09 /* KitchenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B124FB2A5556E000D71E09 /* KitchenService.swift */; };
 		C4B124FE2A5556F500D71E09 /* KitchenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B124FD2A5556F500D71E09 /* KitchenModel.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		C412C0ED2A5C3BE700C11BA6 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		C412C0EF2A5C408E00C11BA6 /* ShoppinClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppinClass.swift; sourceTree = "<group>"; };
+		C48E7E732A602E600034606E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C48E7E752A6037E70034606E /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		C4B124F92A55460E00D71E09 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		C4B124FB2A5556E000D71E09 /* KitchenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenService.swift; sourceTree = "<group>"; };
 		C4B124FD2A5556F500D71E09 /* KitchenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenModel.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				C4B124FB2A5556E000D71E09 /* KitchenService.swift */,
 				C412C0ED2A5C3BE700C11BA6 /* BasketView.swift */,
 				C412C0EF2A5C408E00C11BA6 /* ShoppinClass.swift */,
+				C48E7E732A602E600034606E /* Coordinator.swift */,
+				C48E7E752A6037E70034606E /* CoordinatorView.swift */,
 				C4EBE60A2A53F79D00576CAA /* Assets.xcassets */,
 				C4EBE60C2A53F79D00576CAA /* Preview Content */,
 				C4EBE6202A5443FE00576CAA /* ScaleScreen.swift */,
@@ -174,6 +180,8 @@
 				C4EBE6172A5403F000576CAA /* KitchensViewModel.swift in Sources */,
 				C412C0F02A5C408E00C11BA6 /* ShoppinClass.swift in Sources */,
 				C4B125002A55580F00D71E09 /* CategoriesView.swift in Sources */,
+				C48E7E742A602E600034606E /* Coordinator.swift in Sources */,
+				C48E7E762A6037E70034606E /* CoordinatorView.swift in Sources */,
 				C4B124FA2A55460E00D71E09 /* TabView.swift in Sources */,
 				C4B124FE2A5556F500D71E09 /* KitchenModel.swift in Sources */,
 				C4EBE6072A53F79C00576CAA /* KitchenApp.swift in Sources */,
