@@ -9,24 +9,13 @@ import SwiftUI
 
 struct MainView: View {
     private var categores: Categores = Categores.allCategores
+    @EnvironmentObject private var coordinator: Coordinator
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                     ForEach(categores.сategories, id: \.id) { category in
                         NavigationLink {
-                            switch category.id
-                            {
-                            case 1:
-                                CategoriesView()
-                            case 2:
-                                CategoriesView()
-                            case 3:
-                                CategoriesView()
-                            case 4:
-                                CategoriesView()
-                            default:
-                                CategoriesView()
-                            }
+                            coordinator.build(.categories)
                         } label: {
                             TextOnImage(text: category.name, url: category.imageURL)
                         }
