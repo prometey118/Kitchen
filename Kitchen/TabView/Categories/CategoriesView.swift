@@ -55,8 +55,6 @@ struct Buttons: View {
                             Text("Все меню")
                                 .foregroundColor(mainTemp == 0 ? .white : .black)
                         }
-                    
-                        
                 }
                 
 
