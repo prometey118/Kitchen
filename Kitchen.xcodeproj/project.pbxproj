@@ -123,7 +123,6 @@
 		C4EBE5FA2A53F79C00576CAA = {
 			isa = PBXGroup;
 			children = (
-				C48E7E782A6057A30034606E /* TabView */,
 				C4EBE6052A53F79C00576CAA /* Kitchen */,
 				C4EBE6042A53F79C00576CAA /* Products */,
 			);
@@ -142,6 +141,7 @@
 			children = (
 				C4EBE6062A53F79C00576CAA /* KitchenApp.swift */,
 				C4EBE6162A5403F000576CAA /* KitchensViewModel.swift */,
+				C48E7E782A6057A30034606E /* TabView */,
 				C48E7E7F2A605C370034606E /* Settnigs */,
 				C4B125012A56A90D00D71E09 /* Info.plist */,
 				C4EBE60A2A53F79D00576CAA /* Assets.xcassets */,
