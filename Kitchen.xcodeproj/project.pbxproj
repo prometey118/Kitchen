@@ -70,28 +70,28 @@
 			children = (
 				C4B124F92A55460E00D71E09 /* TabView.swift */,
 				C48E7E7D2A605A7A0034606E /* Coordinator */,
-				C48E7E7A2A6059720034606E /* MainView */,
-				C48E7E792A60581F0034606E /* BasketView */,
+				C48E7E7A2A6059720034606E /* Main */,
+				C48E7E792A60581F0034606E /* Basket */,
 				C48E7E772A60575A0034606E /* Categories */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
 		};
-		C48E7E792A60581F0034606E /* BasketView */ = {
+		C48E7E792A60581F0034606E /* Basket */ = {
 			isa = PBXGroup;
 			children = (
 				C412C0ED2A5C3BE700C11BA6 /* BasketView.swift */,
 				C412C0EF2A5C408E00C11BA6 /* ShoppinClass.swift */,
 			);
-			path = BasketView;
+			path = Basket;
 			sourceTree = "<group>";
 		};
-		C48E7E7A2A6059720034606E /* MainView */ = {
+		C48E7E7A2A6059720034606E /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				C4EBE6082A53F79C00576CAA /* MainView.swift */,
 			);
-			path = MainView;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		C48E7E7B2A6059E50034606E /* Dish */ = {
