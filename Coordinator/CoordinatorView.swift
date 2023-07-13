@@ -9,18 +9,20 @@ import SwiftUI
 
 struct CoordinatorView: View {
     @StateObject private var coordinator = Coordinator()
-    @StateObject private var shoppingList = ShoppingList()
     var body: some View {
+        
         NavigationStack(path: $coordinator.path) {
-            coordinator.build(.tabVew)
+            coordinator.build(.mainView)
                 .navigationDestination(for: Page.self) {
                     page in 
                     coordinator.build(page)
                 }
+            
         }
+        
         .environmentObject(coordinator)
-        .environmentObject(shoppingList)
     }
+    
 }
 
 struct CoordinatorView_Previews: PreviewProvider {
